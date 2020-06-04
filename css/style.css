@@ -1,0 +1,292 @@
+/* Vista para celular*/
+
+/* header */
+header{
+    background-color: #28696A;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20%;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: block;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 30px;
+    height: 28px;
+    margin-top: 20px;
+    padding: 10px;
+
+}
+
+header label img{
+    width: 30px;
+    height: 28px;
+    justify-content: start;
+}
+
+header label:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,.3);
+}
+
+header figure img {
+    display: none;
+}
+
+header h1 {
+    color: #F4AE3F;
+    font-size: 28px;
+    margin-top: 30px;
+    margin-right: 10px;
+    justify-self: end;
+    grid-column: 2/6;
+    grid-row: 2/3;
+}
+
+/* barra de navegacion */
+
+header nav {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    justify-content: start;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    background-color: #28696A;
+    margin:0;
+    padding: 0;
+    list-style: none;
+    margin-top: 24px;
+    height: 200px;
+}
+
+header nav ul li {
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    height: 32.6%;
+
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #F4AE3F;
+    padding: 0px;
+    padding-left:22px ;
+}
+
+.menu {
+    position: absolute;
+    padding: 0px;
+    width: 88.8%;
+    margin-left: -800%;
+    transition: all 0.5s;
+}
+
+#btn-menu:checked + nav *{
+    margin-left: -10px;
+} 
+
+/* Titulos */
+h2{
+    text-align: center;
+    color: rgb(0, 15, 56);
+} 
+/* parrafos */
+
+p{
+    padding: 2px;
+
+}
+
+/* contenedor principal */
+
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #e3fffb
+}
+
+/* pie de pagina */
+
+footer p{
+    font-size: 10px;
+    text-align: right;
+    margin-right: 10px;
+    background-color: #28696A;
+    color: #F4AE3F;
+}
+
+/* pagina publicar */
+
+.cuerpo aside figure img{
+    display: none;
+}
+
+label{
+    display: inline;
+    margin: 2px;
+    width: 100%;
+}
+
+form{
+    width: 345px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    background: rgb(0, 0, 0, 0.2);
+}
+
+form input {
+    align-items: center;    
+    margin: 2px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus{
+    border: 1px solid blue;
+}
+
+form .imprime{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form button{
+    width: 100%;
+    margin-top: 10px;
+    border: 1.5px solid black;
+    background-color: teal;
+    border-radius: 10px;
+}
+
+form button:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+form .rectangulocaptcha{
+    background: whitesmoke;
+    text-align: center;
+    letter-spacing: 10px;
+    border: 2px solid red ;
+    border-radius: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/*-------------------------------------------------------------*/
+
+/* vista desktop*/
+
+@media screen and (min-width: 660px){ 
+    
+    /* header */
+
+    header{
+        height: 150px;
+    }
+
+    header label{
+        display: none;
+    }
+
+    header figure img {
+        display: block;
+        width: 150px;
+        height: 100px;
+        margin-top: 115px;
+        margin-left: 50px;
+        border-radius: 3px;
+    }   
+
+    header h1{
+        text-align: start;
+        font-size: 50px;
+        margin-right: 15px;
+        text-shadow: 0px 2px 1px gray;
+        grid-column: 4/6;
+        grid-row: 2/3;
+    }
+
+    /* barra de navegacion */
+
+    .menu{
+        margin:0;
+        transition: none;
+        width: 0;
+    }
+
+    header nav {
+        grid-column-start: 4;
+        grid-row-start: 4;
+        justify-content: end;
+        margin-left: 20px;
+    }
+
+    header nav ul{
+        flex-direction: row;
+    }
+
+    header nav ul li {
+        border: none;
+        margin-right: 10px;
+    }  
+
+    header nav ul li a{
+        display: block;
+        width: 100px;
+        text-decoration: none;
+        padding: 0px;
+        padding-left: 3px;
+        margin-right: 8px;
+        border-radius: 0 2px 2px 0;
+        border-left: 4px solid #F4AE3F;
+        color: #F4AE3F;
+        background-color: #F0E6D7;
+    }
+
+    /* contenedor principal */
+
+    .maincontainer{
+        min-height: 100vh;
+    }
+
+    /* Pie de pagina*/
+    footer p {
+        padding-right: 5px;
+    }
+
+    /* pagina publicar */
+
+    .maincontainer .cuerpo{
+        display: flex;
+        justify-content:space-evenly ;
+    }
+    
+    .cuerpo aside figure img{
+        width:600px;
+        height: 450px;
+        display: block;
+        border-radius: 5px;
+    }
+    
+    form{
+        width: 400px;
+        margin-bottom: 5px;
+    }
+
+}
